@@ -39,7 +39,7 @@
     </div>
     <div class="col-lg-4 col-sm-6 text-center mb-4">
       <img class="rounded-circle img-fluid d-block mx-auto" src="images/JavaScript.jpg" style="height:10rem;width:10rem" alt="JavaScript">
-      <h3>John Smith
+      <h3>JavaScript
         <!-- <small>Job Title</small> -->
       </h3>
       <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
@@ -47,14 +47,14 @@
     <div class="col-lg-4 col-sm-6 text-center mb-4">
     <i class="devicon-nodejs-plain-wordmark colored" style="font-size:10rem"></i>
 
-      <h3>John Smith
+      <h3>NodeJs
         <!-- <small>Job Title</small> -->
       </h3>
       <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
     </div>
     <div class="col-lg-4 col-sm-6 text-center mb-4">
     <i class="devicon-php-plain colored" style="font-size:10rem;"></i>
-      <h3>John Smith
+      <h3>PHP
         <!-- <small>Job Title</small> -->
       </h3>
       <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
