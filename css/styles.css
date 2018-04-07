@@ -1,0 +1,13 @@
+a.categories:hover {
+    text-decoration: none;
+    background-color: blue;
+}
+
+img:hover {
+    background-color: blue;
+}
+
+.cat:hover {
+    border-radius: 20px;
+    background-color: blue;
+}

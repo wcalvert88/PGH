@@ -16,6 +16,7 @@
     <!-- Custom styles for this template -->
     <link href="css/round-about.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
 
   <body>

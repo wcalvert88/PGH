@@ -13,51 +13,65 @@
   <!-- Team Members Row -->
   <div class="row">
     <div class="col-lg-12">
-      <h2 class="my-4">Our Team</h2>
+      <h2 class="my-4">Analogy Categories</h2>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-      <img class="rounded-circle img-fluid d-block mx-auto" src="images/BPC.jpg" alt="Basic Programming Concepts">
+    <div class="col-lg-4 col-sm-6 text-center mb-4 cat">
+    <a href="categories.php?name=bpc" class="categories">
+      <img class="rounded-circle img-fluid d-block mx-auto" src="images/BPC.jpg" style="height:10rem;width:10rem;" alt="Basic Programming Concepts"></a>
+      <a href="categories.php?name=bpc">
       <h3>Basic Programming Concepts
         <!-- <small>Job Title</small> -->
-      </h3>
-      <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
+      </h3></a>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-      <i class="devicon-html5-plain-wordmark colored" style="font-size:10rem"></i>
+
+    <div class="col-lg-4 col-sm-6 text-center mb-4 cat">
+    <a href="categories.php?name=html" class="categories">
+      <i class="devicon-html5-plain-wordmark colored" style="font-size:10rem;"></i></a>
+      <a href="categories.php?name=html">
       <h3>HTML 5
         <!-- <small>Job Title</small> -->
       </h3>
-      <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
+      </a>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-      <i class="devicon-css3-plain-wordmark colored" style="font-size:10rem"></i>
-      <!-- <img class="rounded-circle img-fluid d-block mx-auto" src="images/CSS3.jpg" alt="CSS3"> -->
+
+    <div class="col-lg-4 col-sm-6 text-center mb-4 cat">
+    <a href="categories.php?name=css" class="categories">
+      <i class="devicon-css3-plain-wordmark colored" style="font-size:10rem;"></i></a>
+      <a href="categories.php?name=css">
       <h3>CSS3
         <!-- <small>Job Title</small> -->
       </h3>
-      <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
+      </a>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-      <img class="rounded-circle img-fluid d-block mx-auto" src="images/JavaScript.jpg" style="height:10rem;width:10rem" alt="JavaScript">
+
+    <div class="col-lg-4 col-sm-6 text-center mb-4 cat">
+    <a href="categories.php?name=bpc" class="categories">
+      <img class="rounded-circle img-fluid d-block mx-auto" src="images/JavaScript.jpg" style="height:10rem;width:10rem;" alt="JavaScript"></a>
+      <a href="categories.php?name=bpc">
       <h3>JavaScript
         <!-- <small>Job Title</small> -->
       </h3>
-      <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
+      </a>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-    <i class="devicon-nodejs-plain-wordmark colored" style="font-size:10rem"></i>
 
+    <div class="col-lg-4 col-sm-6 text-center mb-4 cat">
+    <a href="categories.php?name=nodejs" class="categories">
+    <i class="devicon-nodejs-plain-wordmark colored" style="font-size:10rem;"></i></a>
+    <a href="categories.php?name=nodejs">
       <h3>NodeJs
         <!-- <small>Job Title</small> -->
       </h3>
-      <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
+      </a>
     </div>
-    <div class="col-lg-4 col-sm-6 text-center mb-4">
-    <i class="devicon-php-plain colored" style="font-size:10rem;"></i>
+
+    <div class="col-lg-4 col-sm-6 text-center mb-4 cat">
+    <a href="categories.php?name=php" class="categories">
+    <i class="devicon-php-plain colored" style="font-size:10rem;"></i></a>
+    <a href="categories.php?name=php">
       <h3>PHP
         <!-- <small>Job Title</small> -->
       </h3>
-      <!-- <p>What does this team member to? Keep it short! This is also a great spot for social links!</p> -->
+    </a>
     </div>
   </div>
 
