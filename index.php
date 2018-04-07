@@ -45,7 +45,7 @@
     </div>
 
     <div class="col-lg-4 col-sm-6 text-center mb-4 cat">
-    <a href="categories.php?name=bpc" class="categories">
+    <a href="categories.php?name=js" class="categories">
       <img class="rounded-circle img-fluid d-block mx-auto" src="images/JavaScript.jpg" style="height:10rem;width:10rem;" alt="JavaScript"></a>
       <a href="categories.php?name=bpc">
       <h3>JavaScript
