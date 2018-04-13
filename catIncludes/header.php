@@ -1,3 +1,7 @@
+<?php 
+  include "./includes/db.php";
+  include "./includes/functions.php";
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,3 +30,5 @@
   </head>
 
   <body id="page-top">
+  
+  

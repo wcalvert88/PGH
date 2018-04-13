@@ -10,10 +10,45 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
+          <?php 
+          if ($_GET['name']) {
+            $cat = $_GET['name'];
+          }
+          // echo $cat;
+          switch($cat) {
+            case "bpc";
+                $cat = "Basic Programming Concepts";
+                break;
+            case "html";
+                $cat = "HTML";
+                break;
+            case "css";
+                $cat = "CSS";
+                break;
+            case "js";
+                $cat = "JavaScript";
+                break;
+            case "nodejs";
+                $cat = "NodeJS";
+                break;
+            case "php";
+                $cat = "PHP";
+                break;
+            default;
+                echo "Category Not Available";
+                break;
+        }
+          $query = "SELECT Category FROM analogies WHERE Category = '{$cat}'";
+          $catQuery = mysqli_query($connection, $query);
+          confirmQuery($catQuery);
+          while ($row = mysqli_fetch_assoc($catQuery)) {
+
+
+            ?> <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><?php echo $cat; ?></a></li>
+            <?php
+          }
+          ?>
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
@@ -27,7 +62,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li>
+          </li> -->
           <li class="nav-item">
           <a href="mailto:name@email.com">name@email.com</a>
           </li>
