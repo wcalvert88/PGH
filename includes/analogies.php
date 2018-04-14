@@ -1,12 +1,42 @@
 <?php 
 
-include "/header.php";
-include "/navBar.php";
+include "catIncludes/header.php";
+include "./catIncludes/navBar.php";
+
+if (isset($_GET['name'])) {
+  $source = $_GET['name'];
+} else {
+  $source = '';
+}
+
+switch($source) {
+  case "bpc";
+      include "includes/bpc.php";
+      break;
+  case "html";
+      include "includes/html.php";
+      break;
+  case "css";
+      include "includes/css.php";
+      break;
+  case "js";
+      include "includes/js.php";
+      break;
+  case "nodejs";
+      include "includes/nodejs.php";
+      break;
+  case "php";
+      include "includes/php.php";
+      break;
+  default;
+      include "index.php";
+      break;
+}
 
 ?>
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
-          <h2 class="mb-5 text-center">Analogies</h2>
+          <h2 class="mb-5 text-center"><?php /* fix me */ $query = "SELECT category FROM analogies WHERE title"; ?></h2>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
@@ -20,6 +50,7 @@ include "/navBar.php";
               <span class="text-primary"></span>
             </div>
           </div>
+          ?>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
