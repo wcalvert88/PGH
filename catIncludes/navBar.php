@@ -38,14 +38,30 @@
                 echo "Category Not Available";
                 break;
         }
+
+        // Categories
           $query = "SELECT Category FROM analogies WHERE Category = '{$cat}'";
           $catQuery = mysqli_query($connection, $query);
           confirmQuery($catQuery);
+          // Sub-categories
+          $subQuery = "SELECT DISTINCT SubCategory FROM analogies WHERE Category = '{$cat}'";
+          $subSubQuery = mysqli_query($connection, $subQuery);
+          $subCat = array();
+          while ($rows = mysqli_fetch_assoc($subSubQuery)) {
+            $subCat[] = $rows['SubCategory'];
+          }
+          echo "<strong>";
+          echo $cat;
+          echo "</strong>";
+          $count = 0;
           while ($row = mysqli_fetch_assoc($catQuery)) {
 
-
-            ?> <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><?php echo $cat; ?></a></li>
+            ?> 
+            <?php if ($count < count($subCat)) { ?>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><?php echo $subCat[$count]; ?></a></li>
             <?php
+            }
+            $count++;
           }
           ?>
           <!-- <li class="nav-item">
