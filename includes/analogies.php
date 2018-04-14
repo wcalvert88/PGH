@@ -1,3 +1,9 @@
+<?php 
+
+include "/header.php";
+include "/navBar.php";
+
+?>
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
           <h2 class="mb-5 text-center">Analogies</h2>
@@ -43,3 +49,7 @@
         </div>
 
       </section>
+      <?php 
+      include "catIncludes/social.php";
+      include "catIncludes/footer.php";
+      ?>
