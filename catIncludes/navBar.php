@@ -2,7 +2,43 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Home</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+        <?php
+        if ($_GET['name']) {
+          $cat = $_GET['name'];
+        } 
+        switch ($cat) {
+          case "bpc":
+            $img = "./images/BPC.jpg";
+            break;
+          case "cplusplus":
+            $img = "./images/CPlusPlus.png";
+            break;
+          case "css":
+            $img = "./images/CSS3.jpg";
+            break;
+          case "html":
+            $img = "./images/HTML5.png";
+            break;
+          case "js":
+            $img = "./images/JavaScript.jpg";
+            break;
+          case "nodejs":
+            $img = "./images/nodejs.jpg";
+            break;
+          case "php":
+            $img = "./images/PHP.jpg";
+            break;
+          case "python":
+            $img = "./images/Python.jpg";
+            break;
+          case "ruby":
+            $img = "./images/Ruby.jpg";
+            break;
+          default:
+            echo "Image Not Found";
+        }
+        ?>
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="<?php echo $img; ?>" alt="">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,54 +47,54 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <?php 
-          if ($_GET['name']) {
-            $cat = $_GET['name'];
-          }
+          
           // echo $cat;
           switch($cat) {
-            case "bpc";
-                $cat = "Basic Programming Concepts";
+            case "bpc":
+                $cat1 = "Basic Programming Concepts";
                 break;
-            case "html";
-                $cat = "HTML";
+            case "html":
+                $cat1 = "HTML";
                 break;
-            case "css";
-                $cat = "CSS";
+            case "css":
+                $cat1 = "CSS";
                 break;
-            case "js";
-                $cat = "JavaScript";
+            case "js":
+                $cat1 = "JavaScript";
                 break;
-            case "nodejs";
-                $cat = "NodeJS";
+            case "nodejs":
+                $cat1 = "NodeJS";
                 break;
-            case "php";
-                $cat = "PHP";
+            case "php":
+                $cat1 = "PHP";
+                break;
+            case "python":
+                $cat1 = "Python";
                 break;
             default;
                 echo "Category Not Available";
-                break;
         }
 
         // Categories
-          $query = "SELECT Category FROM analogies WHERE Category = '{$cat}'";
+          $query = "SELECT Category FROM analogies WHERE Category = '{$cat1}'";
           $catQuery = mysqli_query($connection, $query);
           confirmQuery($catQuery);
           // Sub-categories
-          $subQuery = "SELECT DISTINCT SubCategory FROM analogies WHERE Category = '{$cat}'";
+          $subQuery = "SELECT DISTINCT SubCategory FROM analogies WHERE Category = '{$cat1}'";
           $subSubQuery = mysqli_query($connection, $subQuery);
           $subCat = array();
           while ($rows = mysqli_fetch_assoc($subSubQuery)) {
             $subCat[] = $rows['SubCategory'];
           }
           echo "<strong>";
-          echo $cat;
+          echo $cat1;
           echo "</strong>";
           $count = 0;
           while ($row = mysqli_fetch_assoc($catQuery)) {
 
             ?> 
             <?php if ($count < count($subCat)) { ?>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><?php echo $subCat[$count]; ?></a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="categories.php?name=<?php echo $cat; ?>&sub=<?php echo $subCat[$count]; ?>"><?php echo $subCat[$count]; ?></a></li>
             <?php
             }
             $count++;
