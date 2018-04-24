@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <a class="navbar-brand js-scroll-trigger" href="./index.php">
         <span class="d-block d-lg-none">Home</span>
         <span class="d-none d-lg-block">
         <?php
@@ -80,47 +80,7 @@
         } else {
           $title = "";
         }
-        switch ($title) {
-          case "Loops in General":
-            $title = "lig";
-            break;
-          case "html":
-            $title = "html";
-            break;
-          case "CSS in General":
-            $title = "cssgeneral";
-            break;
-          case "JavaScript in General":
-            $title = "jsgeneral";
-            break;
-          case "Class vs Id":
-            $title = "clvsid";
-            break;
-          case "For Loops":
-            $title = "floops";
-            break;
-          case "While Loops":
-            $title = "wloops";
-            break;
-          case "Functions in General":
-            $title = "fgeneral";
-            break;
-          case "If and Else":
-            $title = "ifelse";
-            break;
-          case "Variables":
-            $title = "variables";
-            break;
-          case "Strings":
-            $title = "strings";
-            break;
-          case "HTML tags":
-            $title = "htmltags";
-            break;
-          default :
-            $title = "Title not found.";
-            break;
-         }
+
         // Categories
           $query = "SELECT Category FROM analogies WHERE Category = '{$cat1}'";
           $catQuery = mysqli_query($connection, $query);
@@ -143,30 +103,58 @@
             $whileTitleQuery = mysqli_query($connection, $titleQuery);
             // print_r($whileTitleQuery);
             $row1 = mysqli_fetch_assoc($whileTitleQuery);
-            
+            switch ($row1['title']) {
+              case "Loops in General":
+                $title = "lig";
+                break;
+              case "html":
+                $title = "html";
+                break;
+              case "CSS in General":
+                $title = "cssgeneral";
+                break;
+              case "JavaScript in General":
+                $title = "jsgeneral";
+                break;
+              case "ClassesIds":
+                $title = "clvsid";
+                break;
+              case "For Loops":
+                $title = "floops";
+                break;
+              case "While Loops":
+                $title = "wloops";
+                break;
+              case "Functions in General":
+                $title = "fgeneral";
+                break;
+              case "IfElse":
+                $title = "ifelse";
+                break;
+              case "Variables":
+                $title = "variables";
+                break;
+              case "Strings":
+                $title = "strings";
+                break;
+              case "HTML tags":
+                $title = "htmltags";
+                break;
+              default :
+                $title = "Title not found.";
+                break;
+             }
              ?>
-             <li class="nav-item nav-link js-scroll-trigger"><?php echo $subCat[$count];?></li>
+             <!--<li class="nav-item nav-link js-scroll-trigger"><?php //echo $subCat[$count]; ?></li>-->
+
+
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="categories.php?name=<?php echo $cat; ?>&sub=<?php echo $subCat[$count]; ?>&title=<?php echo $title; ?>"><?php echo $row1['title']; ?></a></li>
             <?php
             }
             $count++;
           }
           ?>
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-          </li> -->
+
           <li class="nav-item">
           <a href="mailto:name@email.com">name@email.com</a>
           </li>

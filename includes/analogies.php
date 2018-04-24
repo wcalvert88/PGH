@@ -55,7 +55,7 @@ switch ($title) {
     $title1 = "JavaScript in General";
   break;
   case "clvsid":
-    $title1 = "Class vs Id";
+    $title1 = "ClassesIds";
   break;
   case "floops":
     $title1 = "For Loops";
@@ -67,7 +67,7 @@ switch ($title) {
     $title1 = "Functions in General";
   break;
   case "ifelse":
-    $title1 = "If and Else";
+    $title1 = "IfElse";
   break;
   case "variables":
     $title1 = "Variables";
